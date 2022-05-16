@@ -1,0 +1,30 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<h2>Sub -- Delete this later</h2>
+	<p>this is a front page twig</p>
+	{% if fn('is_front_page') %}
+	<p>home test of fn</p>
+ 	{% include 'boxes.twig' %}
+	{% endif %} 
+
+	{% if is_front_page %}
+ Homepage content
+{% endif %}
+
+	{% include 'boxes.twig' %} 
+	{% set cards = post.meta('cards') %}
+		{% for key, item in cards.get_field('cards') %}
+  	<p class="{{key}}">{{item.card_title}}</p>
+		{% endfor %} 
+	{% for item in post.get_field('cards') %}
+    <p>TEST: {{ item.card_title }}</p>
+  {% endfor %}
+	<section class="article-content">
+				<h1 class="article-h1">{{ post.title }}</h1>
+				<div class="article-body">
+					{{post.content}}
+				</div>
+		</section>
+	
+{% endblock %}
