@@ -1,8 +1,11 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h2>Sub -- Delete this later</h2>
+	<h2>Sub Home -- Delete this later</h2>
 	<p>this is a home twig</p>
+	{# {% for post in posts %}
+    {% include 'teaser-post.twig' %}
+	{% endfor %} #}
 {{ dump(content) }}
 	{% include 'boxes.twig' %} 
 	{% set cards = post.meta('cards') %}
