@@ -3,23 +3,5 @@
 {% block content %}
 	<h2>Sub Home -- Delete this later</h2>
 	<p>this is a home twig</p>
-	{# {% for post in posts %}
-    {% include 'teaser-post.twig' %}
-	{% endfor %} #}
-{{ dump(content) }}
-	{% include 'boxes.twig' %} 
-	{% set cards = post.meta('cards') %}
-		{% for key, item in cards.get_field('cards') %}
-  	<p class="{{key}}">{{item.card_title}}</p>
-		{% endfor %} 
-	{% for item in post.get_field('cards') %}
-    <p>TEST: {{ item.card_title }}</p>
-  {% endfor %}
-	<section class="article-content">
-				<h1 class="article-h1">{{ post.title }}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-		</section>
 	
 {% endblock %}

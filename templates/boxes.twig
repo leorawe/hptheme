@@ -1,23 +1,12 @@
-<p>boxes twig - cards </p>
-{{ dump(content) }}
-{# {% set boxes = post.meta('boxes') %} #}
-  {# {% if boxes.boxes.box_repeater %}
-  <p>yes box repeater</p>
-  {% set info = boxes.boxes.box_repeater %}
-  {% for box in info %}
+<p>boxes twig</p>
+
+{{ post.box_text }}
+{{ post.box_title }}
+{% set boxes = post.meta('fields') %} 
+  {% for box in boxes %}
     <p><strong>Title:</strong> {{ box.box_title }}</p>
     <p><strong>Text:</strong> {{ box.box_text }}</p>
   {% endfor %}
-  {% endif %} #}
-  {% for item in post.get_field('cards') %}
-    <p>{{ item }}</p>
-  {% endfor %}
-  {{ post.meta('cards').card_title  }}
-{% set cards = post.meta('cards') %}
-{% for key, item in cards.get_field('cards') %}
-  <li class="{{key}}">{{item.card_title}}</li>
-{% endfor %} 
-  {# {% for card in cards %}
-    <p><strong>Title:</strong> {{ card.card_title }}</p>
-  {% endfor %} #}
+
+
 

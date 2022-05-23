@@ -9,6 +9,17 @@
 					{{post.content}}
 				</div>
 			</section>
+
+			<hr />
+			{{ dump(post.fields) }}
+
+			<hr />
+			{{ post.box_title}}
+
+		<hr />
+
+			{% include 'boxes.twig' %} 
+
 		</article>
 	</div><!-- /content-wrapper -->
 {% endblock %}
