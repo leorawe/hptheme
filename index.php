@@ -13,11 +13,18 @@
  * @since   Timber 0.1
  */
 
-$context          = Timber::context();
-$context['posts'] = new Timber\PostQuery();
-$context['foo']   = 'bar';
-$templates        = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift( $templates, 'front-page.twig', 'home.twig' );
+// $context          = Timber::context();
+// $context['posts'] = new Timber\PostQuery();
+
+// $templates        = array( 'index.twig' );
+// // if ( is_home() ) {
+// // 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
+// // }
+// Timber::render( $templates, $context );
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Direct access to theme files is not allowed.' );
 }
-Timber::render( $templates, $context );
+
+get_template_part( 'home' );
+
