@@ -2,7 +2,9 @@
 
 {{ post.box_text }}
 {{ post.box_title }}
-{% set boxes = post.meta('fields') %} 
+<hr />
+{# {{ dump(post.box_repeater)}} #}
+{% set boxes = post.meta('box_repeater') %} 
   {% for box in boxes %}
     <p><strong>Title:</strong> {{ box.box_title }}</p>
     <p><strong>Text:</strong> {{ box.box_text }}</p>
