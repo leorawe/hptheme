@@ -35,3 +35,12 @@
   display: 100%;
   text-decoration: none;
 }
+
+.hp-boxes-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.hp-box-wrap {
+  min-width: 300px;
+}
