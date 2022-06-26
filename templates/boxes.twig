@@ -2,14 +2,12 @@
 {% set boxes = post.meta('box_repeater') %} 
   {% for box in boxes %}
   <div class="hp-box-wrap"><div class="hp-box">
-    <div class="hp-box-text">{{ box.box_title }}</div>
-    <div class="hp-box-text">{{ box.box_text_area }}</div>
-    <a class="button" href="{{ box.link_url }}">{{ box.box_title }}</a>
+  {# {{ dump(box)}} #}
     <div class="hp-image-container">
-    image goes here
-    	<img src="" alt="" />
-      <img src="{{ box.box_image.thumbnail.src }}" class="hp-thumb-class" alt="{{ box.box_title }}" />
+      <img src="{{ box.image_boxed.url }}" class="hp-thumb-class" alt="{{ box.box_title }}" />
     </div>
+    <a class="button" href="{{ box.link.url }}">{{ box.box_title }}</a>
+    <div class="hp-box-text">{{ box.box_text_area }}</div>
     </div></div>
   {% endfor %}
 
