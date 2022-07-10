@@ -6,15 +6,12 @@
     <div class="hp-image-container">
       <img src="{{ box.image_boxed.url }}" class="hp-thumb-class" alt="{{ box.box_title }}" />
     </div>
-    <a class="button" href="{{ box.link.url }}">{{ box.box_title }}</a>
+    <h2><a class="button" href="{{ box.link.url }}">{{ box.box_title }}</a></h2>
     <div class="hp-box-text">{{ box.box_text_area }}</div>
     </div></div>
   {% endfor %}
-
-
 </div>
 
-<hr />
 {# {{ dump(boxes)}} #}
 
 
