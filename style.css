@@ -80,6 +80,7 @@ footer {
   text-decoration: none;
   text-align: center;
   color:white;
+  width: 100%;
 }
 
 .nav-main ul li:hover {
@@ -113,6 +114,10 @@ footer {
   top: 30px;
   left: 0;
   width: 200px;
+}
+
+.article-header img {
+  margin-left: 0;
 }
 
 .hp-boxes-container, .content-wrapper {
@@ -195,6 +200,11 @@ footer ul li a:hover {
 }
 
 @media only screen and (min-width: 940px) {
+
+  .article-header img {
+    margin-left: -130px;
+  }
+
   .hp-boxes-container, .content-wrapper {
     width: 940px;
   }
