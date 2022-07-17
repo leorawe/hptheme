@@ -53,37 +53,41 @@ footer {
   text-align: center;
   background-color: #a82e3f;
 }
-.nav-main>ul {
-  display: flex;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.nav-main > ul li {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
 
 .nav-main ul {
   list-style-type: none;
   width: 100%;
+  padding: 0;
 }
 
 .nav-main ul li {
-  margin: 0 20px;
+  margin: 0;
+  margin-bottom: 1px;
   padding: 10px;
-  background: #efefef;
+  background-color:cornflowerblue;
   height: 20px;
-  width: 180px;
+  width: 100%;
   cursor: pointer;
+}
+
+.nav-main > ul li {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .nav-main ul li a {
   display: block;
   text-decoration: none;
+  text-align: center;
+  color:white;
 }
 
 .nav-main ul li:hover {
-  background: #eeeeee;
+  background-color:darkblue;
+}
+
+.nav-main ul li:hover a {
+  color: white;
 }
 
 .nav-main ul li .dropdown ul {
@@ -94,6 +98,23 @@ footer {
   display: flex;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown ul a {
+  display: block;
+}
+
+.nav-main ul li .dropdown ul {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 200px;
+}
+
 .hp-boxes-container, .content-wrapper {
   margin: 0 auto;
   width: 100%;
@@ -101,6 +122,7 @@ footer {
 
 footer ul {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   list-style: none;
@@ -109,17 +131,23 @@ footer ul {
 }
 
 footer ul li {
-  max-width: 250px;
-  margin: 0 10px;
+  max-width: 100%;
+  margin: 10px 0;
+  text-align: center;
 }
 
 footer ul li .dropdown {
   display: none;
 }
 
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
 .hp-boxes-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hp-box-wrap {
@@ -152,15 +180,57 @@ footer ul li .dropdown {
   max-width: 300px;
 }
 
+.image-captions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .copy {
   text-align: right;
+}
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 940px) {
   .hp-boxes-container, .content-wrapper {
     width: 940px;
   }
+
   .hp-boxes-container {
+    flex-wrap: nowrap;
+  }
+  
+  .nav-main>ul {
+    flex-wrap: nowrap;
+    display: flex;
+  }
+
+  .nav-main ul li {
+    margin: 0 20px;
+    width: 180px;
+    margin-bottom: 1px;
+  }
+
+  .nav-main > ul li {
+    width: 180px;
+    display: flex;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  footer ul {
+    flex-direction: row;
+  }
+
+  footer ul li {
+    max-width: 250px;
+    margin: 0 10px;
+  }
+
+  .image-captions {
     flex-wrap: nowrap;
   }
 }
