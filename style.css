@@ -199,6 +199,10 @@ footer ul li a:hover {
   height: auto;
 }
 
+.banner img {
+  max-width: 100%;
+}
+
 @media only screen and (min-width: 940px) {
 
   .article-header img {
