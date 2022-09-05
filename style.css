@@ -70,6 +70,10 @@ footer {
   cursor: pointer;
 }
 
+.nav-main ul li.current-menu-item {
+  background-color: firebrick;
+}
+
 .nav-main > ul li {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
