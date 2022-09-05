@@ -207,6 +207,35 @@ footer ul li a:hover {
   max-width: 100%;
 }
 
+.hp-flex {
+  display: flex;
+}
+
+.hp-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.hp-full {
+  width: 100%;
+}
+
+.hp-justify-between {
+  justify-content: space-between;
+}
+
+.hp-third {
+  width: 33.33333%
+}
+
+.hp-two-third {
+  width: 66.66666%
+}
+
+.hp-thumb {
+  max-width: 300px;
+  object-fit: contain;
+}
+
 @media only screen and (min-width: 940px) {
 
   .article-header img {
