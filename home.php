@@ -4,4 +4,8 @@ if ( ! defined( 'ABSPATH' ) ){
 	die( 'Direct access to theme files is not allowed.' );
 }
 
-get_template_part( 'pages/home/page' );
+// $currentPage = get_page_by_title('Home Sweet Home');
+// print_r($currentPage);
+
+get_template_part( 'pages/home/news' );
+
