@@ -11,7 +11,8 @@ if ( ! defined( 'ABSPATH' ) ){
 
 $context          = Timber::context();
 $context['post']  = Timber::get_post();
-$context['posts'] = Timber::get_posts();
+$args = 'post_type=post&numberposts=10&orderby=date&order=desc';
+$context['posts'] = Timber::get_posts( $args );
 $templates        = array( 'home.twig' );
 
 Timber::render(
