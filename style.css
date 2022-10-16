@@ -48,6 +48,14 @@ footer {
   text-decoration: none;
 }
 
+h2 a {
+  text-decoration: none;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+}
+
 .banner {
   margin: 0 auto;
   text-align: center;
@@ -234,6 +242,22 @@ footer ul li a:hover {
 .hp-thumb {
   max-width: 300px;
   object-fit: contain;
+}
+
+.hp-m-top {
+  margin-top: 40px;
+}
+
+.hp-bold {
+  font-weight: 700;
+}
+
+.hp-head-font {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hp-bigger {
+  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 940px) {
