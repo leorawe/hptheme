@@ -41,6 +41,11 @@
 		{% block footer %}
 			<footer id="footer">
 				{% include 'footer.twig' %}
+				{% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+				{% endif %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}

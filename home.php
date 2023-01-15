@@ -8,4 +8,5 @@ if ( ! defined( 'ABSPATH' ) ){
 // print_r($currentPage);
 
 get_template_part( 'pages/home/news' );
-
+// get_template_part( 'pages/home/page' );
+// get_template_part( 'sidebar' );

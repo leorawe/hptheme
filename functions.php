@@ -110,6 +110,24 @@ class StarterSite extends Timber\Site {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	/**
+ * Register widget area.
+ *
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function timber_hp_theme_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Timber HP Theme Footer', 'timber_hp_theme' ),
+		'id'            => 'sidebar-1',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'timber_hp_theme_widgets_init' );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.

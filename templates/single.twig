@@ -1,4 +1,5 @@
 {% extends "base.twig" %}
+{% import 'partial/macros.twig' as macros %}
 {% block head %}
     <meta property="og:title" value="{{ post.title }}" />
 		<meta property="og:description" value="{{ post.excerpt }}" />
@@ -14,8 +15,9 @@
 				<div class="article-body">
 					{{post.content}}
 				</div>
-
+				<div class="article-entry-footer">{{ macros.post_terms( post ) }}</div>
 			{% include 'boxes.twig' %} 
+
 			</section>
 		</article>
 	</div><!-- /content-wrapper -->
