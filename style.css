@@ -130,6 +130,7 @@ h2 a:hover {
 
 .article-header img {
   margin-left: 0;
+  max-width: 100%;
 }
 
 .hp-boxes-container, .content-wrapper {
@@ -260,19 +261,25 @@ footer ul li a:hover {
   font-size: 1.5rem;
 }
 
-article ul li {
-  padding-bottom: 20px
+article ul li,
+article ol li {
+  padding-bottom: 20px;
+  line-height: 20px;
 }
 
 article p {
   line-height: 24px;
 }
 
-@media only screen and (min-width: 940px) {
+article p {
+  line-height: 24px;
+}
 
-  .article-header img {
-    margin-left: -130px;
-  }
+article .article-content {
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 940px) {
 
   .hp-boxes-container, .content-wrapper {
     width: 940px;
