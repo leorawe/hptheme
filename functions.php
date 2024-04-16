@@ -44,14 +44,14 @@ if ( ! class_exists( 'Timber' ) ) {
 /**
  * Sets the directories (inside your theme) to find .twig files
  */
-Timber::$dirname = array( 'templates', 'views' );
+// Timber::$dirname = array( 'templates', 'views' );
+// Sets the directories (inside your theme) to find .twig files.
+Timber::$dirname = [ 'templates', 'views' ];
 
 /**
- * By default, Timber does NOT autoescape values. Want to enable Twig's autoescape?
- * No prob! Just set this value to true
+ * By default, Timber does NOT autoescape values. Timber::$autoescape is deprecated since Timber version 2.0.0! 
  */
 Timber::$autoescape = false;
-
 
 /**
  * We're going to configure our theme inside of a subclass of Timber\Site
