@@ -22,6 +22,8 @@ if ( is_archive() ){
 }
 
 $context          = Timber::context();
+// Timber::get_posts( [ 'post_type' => 'portfolio', 'posts_per_page' => 3 ] )
+// $context['posts'] = Timber::get_posts( [ 'post_type' => 'post', 'posts_per_page' => 10 ] );
 $context['posts'] = Timber::get_posts( $wp_query );
 $templates        = [ "archive.twig" ];
 
