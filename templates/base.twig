@@ -14,9 +14,13 @@
 					<div class="banner">
 					<img src="{{ theme.link }}/images/hpnews-banner.jpg" alt="Highland Park, New Jersey News Banner" />
 					</div>
-					<h1 class="logo" role="banner">
-						<a class="logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+					<div class="header-menu">
+						<a href="/search"><span class="search-icon"></span></a>
+					<h1 role="banner">
+						<a class="site-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
+			</div>
+		 <div class="wrapper">
 					<nav id="nav-main" class="nav-main" role="navigation">
 						{% include "menu.twig" with {'items': main.get_items} %}
 					</nav><!-- #nav -->

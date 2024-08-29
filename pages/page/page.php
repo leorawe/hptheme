@@ -10,10 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $context         = Timber::context();
-$context["post"] = Timber::get_post();
-$templates        = array( 'page.twig' );
+$timber_post     = Timber::get_post();
+$context['post'] = $timber_post;
 
-Timber::render(
-	$templates,
-	$context
-);
+Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+
+
